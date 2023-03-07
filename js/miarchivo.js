@@ -26,9 +26,10 @@ class empresa{
 
     Imprimir_ListaCliente(){
         for(cliente of this.listaclientes)
-         document.write(cliente.nombre + " "  + cliente.apellido + " "  + cliente.DNI + " "  +
-         cliente.fecha + " "  + cliente.minconsumido + " "  + cliente.comboplus + " " + cliente.preciocombo);
 
+         document.write( "\n ***************" + cliente.nombre + " "  + cliente.apellido + " "  + cliente.DNI + " "  +
+         cliente.fecha + " "  + cliente.minconsumido + " "  + cliente.comboplus + " " + cliente.preciocombo);
+        
     }
 }
 
