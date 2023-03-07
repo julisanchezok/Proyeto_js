@@ -4,12 +4,8 @@ clientes que hayan consumido menos del 85% de los minutos libres de su plan.
 Adicionalmente lanza una oferta por tiempo limitado (hasta una fecha dada) y con cupo 
 restringido, de un combo PLUS.
 De los clientes suscriptos al servicio que brinda conoce sus datos personales: 
-nro. cliente, apellido y nombre, dni, fecha de alta, plan vigente, minutos de comunicación consumidos 
-y nombre del técnico asignado a su área.
-La empresa cuenta con un equipo de técnicos que trabajan por zonas o áreas 
-(cada técnico cubre una sola área).
-Se deberá desarrollar una aplicación, 
-utilizando las clases que crea necesarias,
+nro. cliente, apellido y nombre, dni, fecha de alta, plan vigente, minutos de comunicación consumidos.
+Se deberá desarrollar una aplicación, utilizando las clases que crea necesarias,
 que resuelva las funcionalidades que se muestra en el siguiente menú
 a) Agregar cliente  
 Si se suscribe dentro del plazo de promoción del combo plus, hay que verificar si hay cupo 
