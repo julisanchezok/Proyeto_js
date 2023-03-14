@@ -1,0 +1,817 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    max-width: 1440 px;
+}
+
+body{
+    background-color: #000 !important;
+    color: white !important;
+    font-family: 'Noto Serif Ahom', serif !important;
+ 
+}
+
+/********* organizacion***********
+*** index ****** 
+ nav
+ presentacion
+ frase
+ frase y patio
+ ubicacion
+ footer
+
+***** sobre nosotros *********
+titulo
+parrafo
+sabias que
+share
+
+****************/
+
+/*------------------------------------------------------------------------*/
+/*index*/
+/********* Parte de nav ****************/
+
+header{
+    display: flex;
+
+}
+.barradenav{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.barradenav .menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    width: 86%; 
+
+}
+
+.logo{
+    width: 30%;
+    display: block;
+    height: auto;
+}
+
+
+
+.menu li {
+    list-style-type: none;
+    color: white;
+    display: inline-block;
+    font-size: 15px; 
+    padding: 6px;
+    margin-top: 30px;
+    border-right: 1px;
+    border-right-style: ridge;
+    border-color: white;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+a{
+    color: white !important;
+    text-decoration: none !important;
+}
+
+/********* Parte de presentacion ****************/
+
+.primerinicio{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 18px;
+  height: 529px;
+
+}
+
+#titulo {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items:center;
+    justify-content: center;
+    width: 30%;
+    padding-top: 60px;
+    height: 80%;
+    text-align: center;
+   
+}
+
+.imageninic img{
+    width: 100%;
+    height: 80%;
+    max-width: 400px;
+}
+.imageninic{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    width: 41%;
+    margin-left: 40px;
+
+}
+#titulo h1{
+    font-family: 'Merriweather', serif ;
+}
+#titulo p {
+    font-family: 'Noto Serif Ahom', serif;
+
+}
+
+  #titulo button{
+    background-color: yellow;
+    border: 2px;
+    border-style: solid;
+    font-size: 1rem;
+    width: 200px;
+    height: 80px;
+    border-radius: 50px !important;
+    font-family: 'Roboto', sans-serif !important;
+}
+
+#titulo button:hover{
+    background-color: rgb(255, 208, 0);
+}
+
+/********* Parte de Frase****************/
+
+.frase{
+    display: flex;
+    width: 102%;
+    height: 200px;
+    
+    background-color: rgb(218, 218, 218);
+    color: black;
+  
+    text-align: center;
+    justify-content: center;  
+    align-items: center;
+    
+}
+
+.textfrase{
+    font-size: 3rem;
+    font-family: 'Noto Serif Ahom', serif;
+    font-weight: 600;
+    left: 37px;
+    position: relative;
+}
+
+.yellow{
+    color: rgb(240, 209, 36);
+    text-shadow: 2px 2px 1px black;
+    
+}
+
+/*
+.frasep{
+    height: 500px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 18px;
+ }
+
+.textpa{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    height: 80%;
+    width: 40%;
+    margin-right: 40px;
+    text-align: center;
+}
+
+.imagenpatio{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    width: 41%;
+    height: 80%;
+    margin-left: 40px;
+}
+
+.imagenpatio img{
+    width: 100%;
+    height: 80%;
+    max-width: 400px;
+}
+
+*/
+
+/* PLANES */
+.planes{
+    height: 580px ;
+    color: black;
+    
+}
+.color-cont{
+    background-color: #c0c0c0;
+    width: 100%;
+    padding: 15px;
+    z-index: 1;
+    border-bottom: 1px solid black;
+}
+
+.plan{
+    height: 450px;
+    background-color: white;
+    border: 1px solid #000;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    
+}
+.price{
+    background-color: yellow;
+    width: 70%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    position: relative;
+    bottom: 20px;
+    font-size: 3rem;
+   
+    padding-top: 10px;
+
+ 
+}
+
+.plandesc{
+    padding: 9px;
+    padding-top: 0px;
+}
+
+.contenidoplan{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   justify-content: space-evenly;
+   height: 100%;
+}
+
+.suscribe{
+    background-color: #000;
+    color: white;
+    width: 200px;
+    height: 60px;
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif !important;
+
+}
+
+.suscribe:hover{
+    opacity: 0.7;
+}
+
+
+
+/*UBICACION */
+.ubicacion{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    height: 600px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(218, 218, 218);
+    color: black;
+}
+
+
+.ubicacion h1{
+    display: flex;
+    align-self: flex-start;
+    justify-self: center;
+    
+}
+
+
+.contmap{
+    display: flex;
+    width: 100%;
+   
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(218, 218, 218);
+    color: black;
+}
+
+.contmap object{
+    padding-bottom: 15px;
+    
+}
+
+.mapa{
+    position: relative;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px 3px darkgray;
+    bottom: 30px;
+}
+.textubi{
+    align-items: end;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    font-size: 1.5rem;
+    width: 50%;
+    height: 80%px;
+    text-align: center;
+}
+
+.textubi h1{
+    font-family: 'Merriweather', serif;
+    align-self: center;
+    padding-top: 15px;
+}
+
+/********* Parte de Footer****************/
+
+footer{
+    width: 100%;
+    display: grid;
+    grid-template-areas:
+            "logo   logo   horarios horarios horarios horarios social  social "
+            "logo   logo   horarios horarios horarios horarios social  social "
+            "logo   logo   horarios horarios horarios horarios social  social "
+            "logo   logo   horarios horarios horarios horarios social  social "
+            
+        ;
+    align-items: center;
+    background-color: black;
+    border-top: 1px solid yellow;
+    grid-template-columns: 30% 40% 30%;
+}
+
+
+
+.imgb{
+   
+    height: 100%; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+footer img{
+    max-width: 200px;
+}
+
+.horario{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding-bottom: 25px;
+    text-align: center;
+    border-left: 2px solid yellow;
+    border-right: 2px solid yellow;
+ 
+}
+.titulohora{
+    font-weight: 900;
+    letter-spacing: 14px;
+    font-size: 20px;
+    text-transform:capitalize;
+    align-self: center;
+}
+
+.bold{
+    font-weight: 700;
+    letter-spacing: 4px;
+}
+
+.timing{
+    font-size: 18px;
+    
+    margin-top: 1px;
+   
+}
+.redes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    
+}
+.redes .logos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+      
+}
+.logos img{
+   width: 100%;
+   padding: 10px;
+   max-width: 80px;
+}
+
+.logos li{
+    margin: 0px 10px 0px 10px;
+}
+
+
+/****** SOBRE NOSOTROS *****/
+.conteiner{
+    margin: 20px;
+   
+   
+}
+
+
+.title {
+    display: flex;
+   width: 100%;
+   align-items: center;
+   justify-content: center;
+   font-family: 'Merriweather', serif;
+   font-size: 41px; 
+   background-color: yellow;
+   color: #000;
+   text-align: center;
+   margin-top: 20px;
+   height: 90px;
+}
+
+.text {
+    font-size: 25px;
+}
+
+
+.sn{
+    
+    height: 500px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.sobrenos{
+    
+    width: 50%;
+    height: 90%;
+    font-weight: 700;  
+}
+
+.sabiasq{
+    margin-top: 30px;
+    font-size: 20px; 
+}
+
+.imagencont{
+    width: 41%;
+    height: 90%;
+    align-self: flex-start;
+    margin-left: 40px;
+    max-width: 500px;
+}
+.imagencont img{
+    width: 100%;
+    height: 100%;
+    
+}
+
+
+.titusab{
+    width: 100%;
+    background-color: yellow;
+    color: black;
+}
+.cajasab{
+    background-color: rgb(255, 254, 254);
+    color: black;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.share{
+    margin-top: 30px;
+    font-size: 40px; 
+}
+
+.contenedor {
+    background: url('../images/share.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    height: 90vh;
+    max-height: 500px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    text-shadow: 3px 3px 3px #000 ;
+  }
+
+
+/***** HORARIOS ****/
+.gridarea{
+    display: grid;
+    grid-template-areas: 
+    "header"  
+    "titulo" 
+    "grilla" 
+    "footer";
+}
+.tit{
+    grid-area: titulo;
+}
+header{
+    grid-area: header;
+}
+.foot{
+    grid-area: footer;
+}
+
+.grid{
+    grid-area: grilla;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(3, 30%) ;
+    margin: 50px;
+    align-items: center;
+    justify-items: center;
+    grid-gap: 70px;
+    column-gap: 90px;
+  
+}
+.item{
+    width: 100%;
+    height: 100%;
+    text-align: justify;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+.text_item{
+    text-align: center;
+    margin: 15px;
+    margin-bottom: 5px;
+}
+.itemimg{
+    width: 250px;
+    height: 200px;
+}
+
+
+
+/**** PREGUNTAS FRECUENTES***/
+
+.pregs{
+    margin: 15px;
+
+    margin-top: 6px;
+    margin-left: 90px;
+}
+
+.pregunta{
+    background-color: rgb(255, 254, 254);
+    color: black;
+    width: 50%;
+    margin-top: 15px;
+    margin-left: 30px;
+    height: 35px;
+    font-size: 1.3rem;
+    
+}
+.pregunta p{
+    padding-left:  8px;
+    padding: 5px;
+    margin: 5px;
+}
+
+
+/************ CONTACTO *******/
+
+.cuadro {
+    background-color: rgb(252, 252, 35);
+    color: black;
+    height: 400px;
+    width: 500px;
+    margin-top: 10px;
+    text-transform: uppercase;
+    font-weight: 600;
+ 
+   
+    
+}
+
+form{
+    position: relative;
+    display: block;
+    text-align: left;
+    font-size: 18px;
+    padding: 10px;
+}
+
+textarea{
+    height: 100px;
+    width: 500px;
+}
+ 
+input{
+    height: 30px;
+    width: 500px;
+}
+
+#boton{
+    height: 30px;;
+    width: 70px;
+    margin: 10px;
+    color: white;
+    background-color: rgb(13, 15, 8);
+}
+
+#boton:hover{
+    background-color: darkgray;
+}
+
+
+/* MEDIA QUERIES SIZES*/
+@media (max-width:576px) {
+
+    /** INICIO **/
+    .imageninic {
+        display: none;
+    }
+
+    .primerinicio {
+        height: 400px;
+    }
+
+    #titulo {
+        width: 100%;
+    }
+
+    .frase {
+        height: 200px;
+    }
+
+    .textfrase {
+        font-size: 26px;
+        left: 0px;
+    }
+
+    .frasep {
+        flex-direction: column;
+    }
+
+    .textpa {
+        height: auto;
+        width: auto;
+        margin-right: 0px;
+        font-size: 1rem;
+    }
+
+    .imagenpatio {
+        margin-left: 0px;
+
+    }
+
+    .plan {
+        margin-bottom: 41px;
+    }
+
+    .planes {
+        height: auto;
+    }
+
+    .textubi {
+        width: auto;
+    }
+
+ /*****SOBRE NOSOTROS********/
+    .sn{
+        height: auto;
+        flex-wrap: wrap;
+    }
+    .sobrenos{
+        width: auto;
+        text-align: center;
+    }
+    .imagencont{
+        width: auto;
+        height: auto;
+        margin-left: 0px;
+    }
+
+
+
+
+    /** ACTIVIDADES**/
+    .grid {
+        grid-template-columns: 11fr;
+        grid-template-rows: repeat(9, 13fr);
+        grid-gap: 8px;
+    }
+
+    .title {
+        font-size: 30px;
+        height: 64px;
+    }
+
+
+    /******FOOTER******/
+
+    footer{
+        display: grid;
+        grid-template-areas:
+            "logo   logo   horarios "
+            "logo   logo   horarios "
+            "social social  social  "
+        ;
+        grid-template-columns: 20% 17%;
+    }
+
+    .horario {
+        border: none;
+        grid-area: horarios;
+        text-align: left;
+        align-items: flex-start;
+        margin-left: 10px;
+        padding-bottom: 0px;
+        margin: 10px;
+        
+    }
+
+    .titulohora {
+        font-size: 18px;
+        align-self: start;
+    }
+
+    .timing {
+        font-size: 13px;
+    }
+
+    .imgb {
+        grid-area: logo;
+
+    }
+
+    footer img {
+        width: 98%;
+    }
+
+    .redes {
+        grid-area: social;
+    }
+
+    .logos li {
+
+
+        margin: 0px 20px 0px 20px
+    }
+
+    .logos img {
+        max-width: 50px;
+    }
+
+
+   /**BARRA DE NAV */
+   header{
+    flex-direction: row;
+    flex-wrap: wrap;
+   }
+   .barradenav{
+    width: auto;
+   }
+   .barradenav .menu{
+    width: auto;
+        flex-direction: column;
+
+   }
+   .menu li {
+    font-size: 12px;
+    margin-top: 8px;
+     display: block;
+     justify-content: start;   
+   }
+
+
+   /*****SOBRE NOSOTROS***/
+   .cajasab{
+    text-align: center;
+   }
+}

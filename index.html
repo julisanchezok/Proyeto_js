@@ -1,21 +1,170 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index
-    </title>
+    <link rel="stylesheet" href="./css/styles.css" type="text/css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Noto+Serif+Ahom&family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css" type="text/css"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    
+
 </head>
 <body>
-    <style>
-        body{
-            background-color: rgb(240, 240, 240);
-        }
-    </style>
+    <script src="./js/miarchivo.js" ></script>
     <header>
-        <img src="/images/logo.png">
+        <a href="#">
+            <img class="logo" src="./images/logonav.jpeg" alt="la estación del fitness" >
+        </a>
+        <nav class="barradenav">  
+            <ul class="menu">
+                <li><a href="index.html">Inicio </a>  </li>
+                <li><a href="./pages/sobrenosotros.html">Sobre Nosotros </a>  </li>
+                <li><a href="./pages/horarios.html">Actividades</a>  </li>
+                <li><a href="./pages/faq.html">Preguntas frecuentes </a>  </li>
+                <li><a href="./pages/contacto.html">Contacto </a> </li>
+            </ul>
+        </nav>
     </header>
-    <script src="js/miarchivo.js"></script>
-</body>
+
+    <!--seccion 1  presentacion-->
+    <main class="primerinicio">
+        <div id="titulo">
+            <h1> La Estación del Fitness </h1>
+            <p> Gimnasio, social y bienestar.</p>
+            <button class="asociate"> Asociate </button>
+        </div>
+        <div class="imageninic">
+            <img src="./images/ftini.jpeg" alt="foto del Gimnasio por fuera">
+        </div>
+    </main>
+
+    <!--seccion 2, frase -->
+    <section class="frase">
+        <h2 class="textfrase"> Este <span class="yellow"> lugar </span> te <span class="yellow">cambiará </span> si se lo
+            permites </h2>
+    </section>
+
+
+    <section class="conteiner planes">
+        
+        <div class="row justify-content-around text-center">
+            <h2 class="pb-4" style="color: white;"> Elegi tu plan </h2>
+            <div class=" p-0  pb-3 col-md-3 col-10 plan">
+                <h3 class="color-cont pt-3"  > Plan Mensual </h3>
+                <h2 class="price price1"> $5.600</h2> 
+                <div class="contenidoplan"> 
+                     <p class="plandesc">  Pase libre de Lunes a Sábados
+                    <br>
+                    Acceso a todas las áreas del gimnasio
+                    <br> 
+                    Abona inscripción el primer mes
+                <br>
+                <br>
+                <br>
+                </p>
+                <button class="suscribe"> Inscribite </button>
+
+                </div>
+            </div>
+            <div class=" p-0 pb-3 col-md-4 col-10 plan">
+                <h3  class="color-cont pt-3"> Plan Anual </h3>
+                <h2 class="price price2"> $4.400</h2> 
+                <div class="contenidoplan">
+                    <p class="plandesc"> Área de peso libre, peso integrado, cardio y clases grupales
+                
+                        Acceso a todas las áreas del gimnasio
+                
+                        Acceso a otras sedes de la cadena
+                
+                        Smart Fit Go
+                
+                        1 Plan Vip 30 dias para regalar
+                
+                        Invitar un amigo a entrenar
+                
+                        Sillones de masaje</p>
+                    <button class="suscribe"> Inscribite </button>
+                </div>
+            </div>
+            <div class="p-0 pb-3 col-md-3 col-10 plan">
+                <h3  class="color-cont pt-3"> Plan Semestral </h3>  
+                <h2 class="price price3"> $5.000</h2> 
+                <div class="contenidoplan"> 
+                <p class="plandesc">
+                    Área de peso libre, peso integrado, cardio y clases grupales
+                
+                    Acceso a todas las áreas del gimnasio
+                
+                    Acceso a otras sedes de la cadena
+                
+                    Smart Fit Go
+                
+                    1 Plan Vip 30 dias para regalar
+                
+                    Invitar un amigo a entrenar
+                
+                   
+                </p>
+                <button class="suscribe"> Inscribite </button>
+            </div> 
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Sección 4, ubicacion-->
+
+    <section class="ubicacion">
+       
+        <div class="textubi">
+            <h1> Ubicación</h1>
+            <p class="contmap">
+                <object data="./svg/location.svg" width="37" height="48"> </object>
+        
+                Calchaqui 2084, Quilmes, Buenos Aires
+            </p>
+        </div>
+        
+        <iframe class="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3278.3575849874655!2d-58.28972338504735!3d-34.74658407257781!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a32d96494617e9%3A0x972786e48674038!2sLa%20Estacion%20del%20Fitness!5e0!3m2!1ses-419!2sar!4v1677552877747!5m2!1ses-419!2sar" width="95%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+       
+    </section>
+
+
+    <!-- footer dividido en 3 -->
+        <footer>
+            <!--logo -->
+            <div class="imgb">
+                <img src="./images/foto footer.jpeg" alt="logo la estacion" />
+            </div>
+            <!--horarios -->
+            <div class="horario">
+                <h3 class="titulohora"> Horarios</h3>
+               
+                <div class="timing">
+                    <p> <span class="bold">Lunes a viernes</span> 
+                        <br />
+                        De 7:00 a 22:00 hrs
+                        <br />
+                        <span class="bold">Sábados</span>
+                        <br>
+                        De 09:00 a 18:00 hrs
+                    </p>
+                </div>
+            </div>
+         <!-- Aca van los logos de las redes con los sitios-->
+            <div class="redes">
+                <ul class="logos">
+                    <li><a href="https://www.facebook.com/laestaciondelfitness/"><img src="./images/logofacebook.png"> </a> </li>
+                    <li> <a href="https://www.instagram.com/laestaciondelfitness/?hl=es"><img src="./images/logoinstagram.png"> </a></li>
+                    <li> <a href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSDbgwrLZQgXvMFlnFgGWBPthbGMtQdnLrNNsRrsMptcCsTjrXwWnxBNKFkZntnCSpPJJZlg"> <img src="./images/logogmail.png"> </a> </li>
+                </ul>
+            </div>
+        </footer>
+
+</body>    
 </html>
