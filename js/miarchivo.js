@@ -16,16 +16,24 @@ const nombre = prompt("Ingrese su nombre")
 alert(nombre + "! Te damos la bienvenida a La Estación del Fitness!")
 
 const apellido = prompt("Ingrese su apellido")
-let fechadeNac = prompt("Ingrese su fecha de nacimiento")
+let fechadeNac = Date.parse(prompt("Ingrese su fecha de nacimiento"))
 let fechaNac = new Date (fechadeNac);
 const nacimiento = fechaNac.getFullYear();
 let fechaHoy = new Date ();
 const hoy= fechaHoy.getFullYear();
-
 let edad = hoy - nacimiento ; 
-console.log(edad)
+console.log(apellido)
+console.log(nombre)
+console.log(fechadeNac) 
+console.log(fechaNac)
+console.log(nacimiento)
+console.log(fechaHoy)
+console.log(hoy)
+console.log(edad) 
+
+
 
 let persona = new Socio (nombre, apellido, fechadeNac, edad)
 
-persona.Imprimir(persona);
-
+/*persona.Imprimir(persona);
+*/
