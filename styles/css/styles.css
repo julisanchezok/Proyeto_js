@@ -1,0 +1,815 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  max-width: 1440 px;
+}
+
+ul li {
+  list-style: none;
+}
+
+
+
+.centered, .formulario, .contenedor, .sn, .title, .redes .logos, .redes, .horario, .imgb, .contmap, .ubicacion, .price, .frase, #titulo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ubicacion {
+  width: 100%;
+  flex-wrap: wrap;
+  text-align: center;
+  background-color: rgb(218, 218, 218);
+  color: #000;
+}
+.ubicacion h3 {
+  display: flex;
+  align-self: center;
+}
+.ubicacion .contmap {
+  width: 100%;
+  text-align: center;
+  background-color: rgb(218, 218, 218);
+  color: #000;
+}
+.ubicacion .contmap object {
+  padding-bottom: 15px;
+}
+.ubicacion .mapa {
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px 3px darkgray;
+  margin-bottom: 40px;
+}
+.ubicacion .textubi {
+  align-items: end;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+body {
+  background-color: #000;
+  color: white;
+  font-family: "Noto Serif Ahom", serif;
+}
+
+/********* organizacion***********
+*** index ****** 
+ nav
+ presentacion
+ frase
+ frase y patio
+ ubicacion
+ footer
+
+***** sobre nosotros *********
+titulo
+parrafo
+sabias que
+share
+
+****************/
+/*------------------------------------------------------------------------*/
+/*index*/
+/********* Parte de nav ****************/
+header {
+  display: flex;
+}
+
+.navbar {
+  width: 100%;
+  background-color: black;
+  position: fixed;
+  z-index: 1000;
+}
+
+.menu li {
+  font-size: 14px;
+  margin-right: 18px;
+  border-right: 1px;
+  border-right-style: ridge;
+  border-color: white;
+  padding-right: 15px;
+  padding-left: 7px;
+}
+
+.nav-link {
+  color: white !important;
+}
+
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.navbar-collapse {
+  justify-content: end;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+/********* Parte de presentacion ****************/
+.primerinicio {
+  margin-top: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  flex-direction: row;
+  margin-bottom: 26px;
+  flex-wrap: wrap;
+}
+
+[data-transition=fade-in-up] {
+  transition: all 1s ease;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+[data-transition=fade-in-up].is-inViewport {
+  transition: all 1s ease;
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+#titulo {
+  flex-direction: column;
+  justify-items: center;
+  padding-top: 60px;
+  height: 80%;
+  text-align: center;
+}
+
+.imageninic img {
+  width: 520px;
+  height: 500px;
+  max-width: 520px;
+}
+
+#titulo h1 {
+  font-family: "Merriweather", serif;
+  margin: 10px;
+}
+
+#titulo p {
+  font-family: "Noto Serif Ahom", serif;
+}
+
+#titulo button {
+  background-color: yellow;
+  border: 2px;
+  border-style: solid;
+  font-size: 1rem;
+  width: 200px;
+  height: 60px;
+  border-radius: 20px;
+  font-family: "Roboto", sans-serif;
+}
+ 
+#titulo button a{
+  color: #000;
+}
+
+#titulo button:hover {
+  background-color: rgb(255, 208, 0);
+}
+
+/********* Parte de Frase****************/
+.frase {
+  width: 100%;
+  height: 200px;
+  background-color: rgb(218, 218, 218);
+  color: #000;
+  text-align: center;
+}
+
+.textfrase {
+  font-size: 3rem;
+  font-family: "Noto Serif Ahom", serif;
+  font-weight: 600;
+}
+
+.yellow {
+  color: yellow;
+  text-shadow: 2px 2px 1px #000;
+}
+
+.white {
+  color: white;
+}
+
+/* PLANES */
+.planes {
+  color: #000;
+}
+
+.color-cont {
+  background-color: #c0c0c0;
+  width: 100%;
+  padding: 15px;
+  z-index: 1;
+  border-bottom: 1px solid #000;
+}
+
+.plan {
+  height: 450px;
+  background-color: white;
+  border: 1px solid #000;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.price {
+  background-color: yellow;
+  width: 70%;
+  height: 70px;
+  z-index: 2;
+  position: relative;
+  bottom: 20px;
+  font-size: 3rem;
+  padding-top: 10px;
+}
+
+.plandesc {
+  padding: 9px;
+  padding-top: 0px;
+}
+
+.contenidoplan {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100%;
+}
+
+.suscribe {
+  background-color: #000;
+  color: white;
+  width: 200px;
+  height: 60px;
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+}
+
+.suscribe:hover {
+  opacity: 0.7;
+}
+
+/*UBICACION */
+.ubicacion {
+  width: 100%;
+  flex-wrap: wrap;
+  text-align: center;
+  background-color: rgb(218, 218, 218);
+  color: #000;
+}
+
+.ubicacion h1 {
+  display: flex;
+  align-self: flex-start;
+  justify-self: center;
+}
+
+.contmap {
+  width: 100%;
+  text-align: center;
+  background-color: rgb(218, 218, 218);
+  color: #000;
+}
+
+.contmap object {
+  padding-bottom: 15px;
+}
+
+.mapa {
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px 3px darkgray;
+  margin-bottom: 40px;
+}
+
+.textubi {
+  align-items: end;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  font-size: 1.5rem;
+  text-align: center;
+  width: 50%;
+  height: 80% px;
+}
+
+.textubi h1 {
+  font-family: "Merriweather", serif;
+  align-self: center;
+  padding-top: 15px;
+}
+
+/********* Parte de Footer****************/
+footer {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  align-items: center;
+  background-color: #000;
+  border-top: 1px solid yellow;
+  grid-template-columns: 30% 40% 30%;
+}
+
+.imgb {
+  height: 100%;
+}
+
+footer img {
+  max-width: 200px;
+}
+
+.horario {
+  flex-direction: column;
+  height: 100%;
+  padding-bottom: 25px;
+  text-align: center;
+  border-left: 2px solid yellow;
+  border-right: 2px solid yellow;
+}
+
+.titulohora {
+  font-weight: 900;
+  letter-spacing: 14px;
+  font-size: 20px;
+  text-transform: capitalize;
+  align-self: center;
+}
+
+.bold {
+  font-weight: 700;
+  letter-spacing: 4px;
+}
+
+.timing {
+  font-size: 18px;
+  margin-top: 1px;
+}
+
+.redes {
+  flex-direction: row;
+}
+
+.redes .logos {
+  list-style-type: none;
+}
+
+.logos img {
+  width: 100%;
+  padding: 10px;
+  max-width: 80px;
+}
+
+.logos li {
+  margin: 0px 10px 0px 10px;
+}
+
+/****** SOBRE NOSOTROS *****/
+.conteiner {
+  margin: 20px;
+}
+
+.title {
+  width: 100%;
+  font-family: "Merriweather", serif;
+  font-size: 41px;
+  text-align: center;
+  background-color: yellow;
+  color: #000;
+  margin-top: 120px;
+  height: 90px;
+}
+
+.text {
+  font-size: 25px;
+}
+
+.sn {
+  width: 100%;
+}
+
+.sobrenos {
+  font-weight: 700;
+}
+
+.sabiasq {
+  margin-top: 30px;
+  font-size: 20px;
+}
+
+.imagencont {
+  align-self: flex-start;
+  margin-left: 40px;
+  max-width: 500px;
+}
+
+.imagencont img {
+  width: 100%;
+  height: 100%;
+}
+
+.titusab {
+  width: 100%;
+  background-color: yellow;
+  color: #000;
+  padding: 15px;
+}
+
+.cajasab {
+  background-color: rgb(255, 254, 254);
+  color: #000;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.share {
+  margin-top: 30px;
+  font-size: 40px;
+}
+
+.contenedor {
+  background: url("/images/share.jpeg") no-repeat center center fixed;
+  background-size: cover;
+  height: 90vh;
+  max-height: 500px;
+  text-align: center;
+  text-shadow: 3px 3px 3px #000;
+}
+
+/***** HORARIOS ****/
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 50px;
+  align-items: center;
+  justify-items: center;
+  grid-gap: 70px;
+  column-gap: 90px;
+}
+
+.item {
+  width: 100%;
+  height: 100%;
+  text-align: justify;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.text_item {
+  text-align: center;
+  margin: 15px;
+  margin-bottom: 5px;
+}
+
+.itemimg {
+  width: 250px;
+  height: 200px;
+}
+
+/**** PREGUNTAS FRECUENTES***/
+.here {
+  color: yellow;
+  text-decoration: underline;
+}
+
+.video-responsive {
+  height: 31.5vw;
+  width: 56vw;
+}
+
+@media (max-width: 800px) {
+  .video-responsive {
+    height: 50vw;
+    width: 88vw;
+  }
+}
+input[type=checkbox] {
+  display: none;
+}
+
+.lbl-toggle {
+  display: block;
+  font-weight: normal;
+  font-size: 18px;
+  text-align: left;
+  padding: 1rem;
+  color: #FFFFFF;
+  background: rgba(216, 181, 158, 0);
+  cursor: pointer;
+  border-radius: 7px;
+  transition: all 0.25s ease-out;
+  font-weight: 300;
+}
+
+.lbl-toggle:hover {
+  color: #DDD;
+}
+
+.lbl-toggle::before {
+  content: " ";
+  display: inline-block;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid currentColor;
+  vertical-align: middle;
+  margin-right: 0.7rem;
+  transform: translateY(-2px);
+  transition: transform 0.2s ease-out;
+}
+
+.toggle:checked + .lbl-toggle::before {
+  transform: rotate(90deg) translateX(-3px);
+}
+
+.collapsible-content {
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height 0.25s ease-in-out;
+}
+
+.toggle:checked + .lbl-toggle + .collapsible-content {
+  max-height: 350px;
+}
+
+.toggle:checked + .lbl-toggle {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.collapsible-content .content-inner {
+  background: grey;
+  border-bottom: 1px solid rgb(225, 206, 194);
+  padding: 0.5rem 1rem;
+  color: white;
+}
+
+.collapsible-content p {
+  margin-bottom: 0;
+  font-weight: 300;
+}
+
+.backgroundCustom {
+  background-image: url(https://d2r9epyceweg5n.cloudfront.net/stores/002/143/026/rte/backgroundimg.png);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/************ CONTACTO *******/
+.cuadro {
+  background-color: rgb(252, 252, 35);
+  color: black;
+  margin-top: 10px;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 10px;
+}
+
+.formulario {
+  font-size: 18px;
+  text-align: left;
+  padding: 10px;
+}
+
+form {
+  position: relative;
+  display: block;
+}
+form-label {
+  padding: 5px;
+}
+
+textarea {
+  height: 100px;
+  width: 100%;
+}
+
+input {
+  height: 30px;
+  width: 100%;
+}
+
+#boton {
+  height: 30px;
+  width: 70px;
+  margin: 10px;
+  color: white;
+  background-color: rgb(13, 15, 8);
+}
+
+#boton:hover {
+  background-color: darkgray;
+}
+
+.ubi {
+  margin-top: 30px;
+}
+
+.containerubi {
+  margin-top: 30px;
+  margin: 10px;
+  text-align: center;
+}
+
+
+/************REGISTRATE *******/
+
+input[type=checkbox] {
+  display: block;
+}
+
+/* MEDIA QUERIES SIZES*/
+@media (max-width: 768px) {
+  .menu li {
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+  .navbar-brand img {
+    max-width: 80px;
+    height: auto;
+  }
+  .imageninic img {
+    height: auto;
+    max-width: 300px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .menu li {
+    font-size: 13px;
+    margin-right: 0px;
+  }
+  .sobrenos {
+    text-align: center;
+  }
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .menu li {
+    font-size: 13px;
+    margin-right: 0px;
+  }
+  .logos img {
+    padding: 0px;
+  }
+  .textfrase {
+    font-size: 2.5rem;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media screen and (max-width: 992px) {
+  .imageninic img {
+    max-width: 500px;
+  }
+  .plan {
+    margin: 30px;
+  }
+}
+@media (max-width: 576px) {
+  /** INICIO **/
+  .imageninic img {
+    width: 244px;
+    height: 250px;
+    margin-bottom: 70px;
+  }
+  .primerinicio {
+    gap: 25px;
+    flex-direction: column;
+  }
+  #titulo {
+    width: 100%;
+  }
+  .frase {
+    height: 160px;
+  }
+  .textfrase {
+    font-size: 26px;
+    left: 0px;
+  }
+  .frasep {
+    flex-direction: column;
+  }
+  .textpa {
+    height: auto;
+    width: auto;
+    margin-right: 0px;
+    font-size: 1rem;
+  }
+  .imagenpatio {
+    margin-left: 0px;
+  }
+  .plan {
+    margin-bottom: 41px;
+  }
+  .planes {
+    height: auto;
+  }
+  .textubi {
+    width: auto;
+    font-size: 14px !important;
+  }
+  object {
+    width: 25px;
+  }
+  /*****SOBRE NOSOTROS********/
+  .sn {
+    height: auto;
+    flex-wrap: wrap;
+  }
+  .sobrenos {
+    font-size: 17px;
+    text-align: center;
+  }
+  .imagencont {
+    width: auto;
+    height: auto;
+    margin-left: 0px;
+    max-width: 278px;
+  }
+  /** ACTIVIDADES**/
+  .grid {
+    grid-template-columns: 11fr;
+    grid-template-rows: repeat(9, 13fr);
+    grid-gap: 8px;
+    margin: 30px;
+  }
+  .title {
+    font-size: 30px;
+    height: 64px;
+  }
+  /******FOOTER******/
+  footer {
+    display: grid;
+    grid-template-areas: "logo   logo   horarios " "logo   logo   horarios " "social social  social  ";
+    grid-template-columns: 1fr 1fr;
+  }
+  .horario {
+    border: none;
+    grid-area: horarios;
+    text-align: left;
+    align-items: flex-start;
+    margin-left: 10px;
+    padding-bottom: 0px;
+    margin: 10px;
+  }
+  .titulohora {
+    font-size: 18px;
+    align-self: start;
+  }
+  .timing {
+    font-size: 13px;
+  }
+  .imgb {
+    grid-area: logo;
+  }
+  footer img {
+    width: 98%;
+  }
+  .redes {
+    grid-area: social;
+  }
+  .logos li {
+    margin: 0px 20px 0px 20px;
+  }
+  .logos img {
+    max-width: 50px;
+  }
+  /**BARRA DE NAV */
+  .menu li {
+    font-size: 12px;
+    margin-top: 8px;
+    display: block;
+    justify-content: start;
+    margin-right: 0px;
+  }
+  .navbar-brand img {
+    width: 100px;
+    height: 50px;
+  }
+  /*****SOBRE NOSOTROS***/
+  .cajasab {
+    text-align: center;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

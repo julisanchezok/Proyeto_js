@@ -1,0 +1,12 @@
+{
+  "name": "trabajo-final-coder",
+  "version": "1.0.0",
+  "description": "En el repositorio están las 5 páginas de mi proyecto, \r las que elegí para que sean evaluadas son:\r -index.html\r -horarios.html  (Actividades en la nav)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

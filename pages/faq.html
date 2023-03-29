@@ -4,46 +4,109 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/styles.css" type="text/css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Noto+Serif+Ahom&family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <link rel="stylesheet" href="../styles/css/styles.css" type="text/css"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
 
-    <title>Preguntas frecuentes</title>
+    <title> Preguntas frecuentes | La Estación del Fitness </title>
+<meta name="description" content="Preguntas frecuentes del gimnasio La Estación del Fitness">
+<meta name="keywords" content="Gimnasio, Quilmes, Salud, Información, Cuotas, Actividades, Horarios, Preguntas frecuentes, Certificado">
+
 </head>
 <body>
     <header>
-        <a href="#">
-            <img class="logo" src="../images/logonav.jpeg" alt="la estación del fitness">
-        </a>
-        <nav class="barradenav">
-            <ul class="menu">
-                <li><a href="../index.html">Inicio </a> </li>
-                <li><a href="./sobrenosotros.html">Sobre Nosotros </a> </li>
-                <li><a href="./horarios.html">Actividades</a> </li>
-                <li><a href="./faq.html">Preguntas frecuentes </a> </li>
-                <li><a href="./contacto.html">Contacto </a> </li>
-            </ul>
+        <nav class="navbar navbar-expand-sm navbar-light">
+            <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#opciones">
+                <span class="navbar-toggler-icon custom-toggler"></span>
+            </button>
+            <!-- logo -->
+            <a class="navbar-brand" href="#">
+                <img src="../images/logonav.jpeg" width="150px" height="80px">
+            </a>
+            <!-- enlaces -->
+            <div class="collapse navbar-collapse" id="opciones">
+                <ul class="navbar-nav menu">
+                    <li class="nav-item"><a class="nav-link" href="../index.html"> Inicio</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="./sobrenosotros.html">Sobre Nosotros</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="./horarios.html">Actividades</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="./faq.html">Preguntas frecuentes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./contacto.html">Contacto</a> </li>
+                </ul>
+            </div>
         </nav>
     </header>
-
-    <h1 class="titulo"> Preguntas frecuentes</h1>
- 
+    <h1 class="title"> Preguntas frecuentes</h1>
     <!-- Seccion preguntas frecuentes-->
-
     <main class="pregs">
-
-        <p class="pregunta"> Necesito certificado médico para arrancar?</p>
-
-
-        <p class="pregunta"> Si me lesioné puedo ir a entrenar igual?</p>
-
-
-        <p class="pregunta"> Cuantas veces puedo ir al Gimnasio?</p>
-
-
-        <p class="pregunta"> Tienen vestuario con ducha y lockers?</p>
-
+        <div class="container col-12 col-md-6">
+            <div class="wrap-collabsible"> 
+                <input id="collapsible" class="toggle" type="checkbox">
+                <label for="collapsible" class="lbl-toggle">¿Necesito certificado médico para arrancar?</label>
+                <div class="collapsible-content">
+                    <div class="content-inner">
+                        <p> No, no es necesario! Al momento de inscripción tendrás que llenar una planilla como declaración jurada de tu apto físico y en caso de emergencia tendremos a mano tus datos para saber cómo responder ante la situación</p>
+                    </div>
+                </div>
+            </div>
+            <div class="wrap-collabsible"> 
+                <input id="collapsible2" class="toggle" type="checkbox">
+                <label for="collapsible2" class="lbl-toggle">¿Si me lesioné puedo ir a entrenar igual?</label>
+                <div class="collapsible-content">
+                    <div class="content-inner">
+                        <p>Siempre que tengas autorización médica si! Nuestros entrenadores están capacitados para entrenar personas con lesiónes, operaciones o cualquier tipo de situación que afecte el entrenamiento. Recordá siempre aclararlo en la planilla, de esta forma el profesor sabrá como desarrollar tu rutina</p>
+                    </div>
+                </div>
+            </div>
+            <div class="wrap-collabsible"> 
+                <input id="collapsible3" class="toggle" type="checkbox">
+                <label for="collapsible3" class="lbl-toggle">¿Cuantas veces puedo ir al Gimnasio?</label>
+                <div class="collapsible-content">
+                    <div class="content-inner">
+                        <p>Las que vos quieras! La cuota libre es para que puedas venir los días y horarios que te queden más cómodos. Incluso podes venir más de una vez en el día si quedo algo pendiente por hacer. </p>
+                    </div>
+                </div>
+            </div>
+            <div class="wrap-collabsible"> 
+                <input id="collapsible4" class="toggle" type="checkbox">
+                <label for="collapsible4" class="lbl-toggle">¿Tienen vestuario con ducha?</label>
+                <div class="collapsible-content">
+                    <div class="content-inner">
+                        <p>Si, contamos con vestuario con ducha tanto para hombres como para mujeres! Son de uso completamente libre para cualquier socio del gimnasio.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="wrap-collabsible"> 
+                <input id="collapsible5" class="toggle" type="checkbox">
+                <label for="collapsible5" class="lbl-toggle">¿Tienen lockers?</label>
+                <div class="collapsible-content">
+                    <div class="content-inner">
+                        <p>Si, contamos con lockers! Estos se encuentran en el primer piso del gimnasio al lado de las escaleras. Recordá traer tu candado y llave para guardar tus cosas dentro. El gimnasio no se responsabiliza por objetos pérdidos. Si llevas llaves, billetera o celular y no te sentís seguro dejándolo en un locker siempre podes pedir en recepción que lo guardemos hasta que te vayas!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="wrap-collabsible"> 
+                <input id="collapsible6" class="toggle" type="checkbox">
+                <label for="collapsible6" class="lbl-toggle">¿Cuanto vale una rutina?</label>
+                <div class="collapsible-content">
+                    <div class="content-inner">
+                        <p>Las rutinas en el gimnasio no tienen costo. Podes pedirle a cualquier entrenador que te arme una sin costo. Ellos te entregarán una hoja con una rutina para que tengas un mejor seguimiento de la misma. En ella se encuentran tus datos como Nombre, Apellido, alguna Observación y Duración de la rutina. Podés guardarla en los casilleros de rutina del gimnasio o llevartela con vos! </p>
+                    </div>
+                </div>
+            </div>
+            <div class="wrap-collabsible"> 
+                <input id="collapsible7" class="toggle" type="checkbox">
+                <label for="collapsible7" class="lbl-toggle">¿Hay límite o mínimo de edad?</label>
+                <div class="collapsible-content mb-3">
+                    <div class="content-inner">
+                        <p>Siempre que se tenga ganas buscamos la forma de adaptar los entrenamientos a cualquier edad, lo recomendable del mínimo de edad es desde los 15 años en adelante, pero con autorización de los responsables a cargo se puede entrenar sin problema.</p>
+                    </div>
+                </div>
+            </div>   
+        </div> 
+        <span class="text-center d-block mb-4"> Si no pudimos resolver tus dudas con esta sección haz click <a class="here" href="./contacto.html"> aqui </a></span>
     </main>
     <footer>
         <!--logo -->
@@ -55,29 +118,25 @@
             <h3 class="titulohora"> Horarios</h3>
 
             <div class="timing">
-                <p> <span class="bold">Lunes a viernes</span>
-                    <br />
-                    De 7:00 a 22:00 hrs
-                    <br />
-                    <span class="bold">Sábados</span>
-                    <br>
+                <p><span class="bold">Lunes a viernes</span><br />
+                    De 7:00 a 22:00 hrs<br />
+                    <span class="bold">Sábados</span><br>
                     De 09:00 a 18:00 hrs
                 </p>
             </div>
         </div>
-        <!-- Aca van los logos de las redes con los sitios-->
-        <div class="redes">
-            <ul class="logos">
-                <li><a href="https://www.facebook.com/laestaciondelfitness/"><img src="../images/logofacebook.png"> </a>
-                </li>
-                <li> <a href="https://www.instagram.com/laestaciondelfitness/?hl=es"><img
-                            src="../images/logoinstagram.png">
-                    </a></li>
-                <li> <a
-                        href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSDbgwrLZQgXvMFlnFgGWBPthbGMtQdnLrNNsRrsMptcCsTjrXwWnxBNKFkZntnCSpPJJZlg">
-                        <img src="../images/logogmail.png"> </a> </li>
+        <!-- Aca van los logos de las redes con los sitios-->      
+            <ul class="redes logos p-0">
+                <li><a href="https://www.facebook.com/laestaciondelfitness/"><img src="../images/logofacebook.png"> </a> </li>
+                <li> <a href="https://www.instagram.com/laestaciondelfitness/?hl=es"><img src="../images/logoinstagram.png"> </a></li>
+                <li> <a href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSDbgwrLZQgXvMFlnFgGWBPthbGMtQdnLrNNsRrsMptcCsTjrXwWnxBNKFkZntnCSpPJJZlg"><img src="../images/logogmail.png"> </a> </li>
             </ul>
-        </div>
     </footer>
+    <!--bootstrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"crossorigin="anonymous"></script>    
+   <!--nav-->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"crossorigin="anonymous"></script>
 </body>
 </html>
