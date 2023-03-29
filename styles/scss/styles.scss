@@ -197,6 +197,9 @@ a {
     border-radius: 20px;
     font-family: 'Roboto', sans-serif;
 }
+#titulo button a{
+    color: #000;
+}
 
 #titulo button:hover {
     background-color: rgb(255, 208, 0);
@@ -703,6 +706,13 @@ input {
     text-align: center;
 }
 
+/************REGISTRATE *******/
+
+input[type=checkbox] {
+    display: block;
+}
+  
+  
 /* MEDIA QUERIES SIZES*/
 
 @media  (max-width: 768px) {

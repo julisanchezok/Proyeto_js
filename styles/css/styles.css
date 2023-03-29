@@ -9,8 +9,6 @@ ul li {
   list-style: none;
 }
 
-
-
 .centered, .formulario, .contenedor, .sn, .title, .redes .logos, .redes, .horario, .imgb, .contmap, .ubicacion, .price, .frase, #titulo {
   display: flex;
   align-items: center;
@@ -172,8 +170,8 @@ a {
   border-radius: 20px;
   font-family: "Roboto", sans-serif;
 }
- 
-#titulo button a{
+
+#titulo button a {
   color: #000;
 }
 
@@ -628,9 +626,7 @@ input {
   text-align: center;
 }
 
-
 /************REGISTRATE *******/
-
 input[type=checkbox] {
   display: block;
 }
