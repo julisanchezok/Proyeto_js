@@ -9,7 +9,7 @@ ul li {
   list-style: none;
 }
 
-.centered, .formulario, .contenedor, .sn, .title, .redes .logos, .redes, .horario, .imgb, .contmap, .ubicacion, .price, .frase, #titulo {
+.centered, .formulario, .contenedor, .sn, .title, .redes .logos, .redes, .horario, .imgb, .contmap, .ubicacion, .price, .frase, .grancont, .login, #titulo {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -160,7 +160,7 @@ a {
   font-family: "Noto Serif Ahom", serif;
 }
 
-#titulo button {
+.asociate {
   background-color: yellow;
   border: 2px;
   border-style: solid;
@@ -171,12 +171,32 @@ a {
   font-family: "Roboto", sans-serif;
 }
 
-#titulo button a {
+.asociate a {
   color: #000;
 }
 
-#titulo button:hover {
+.asociate button:hover {
   background-color: rgb(255, 208, 0);
+}
+
+/*FLOTANTE*/
+.login {
+  background-color: #000;
+  height: 400px;
+  width: 600px;
+  position: relative;
+  bottom: 500px;
+  left: 320px;
+  border: 5px solid yellow;
+}
+
+.displayini {
+  display: none;
+}
+
+.grancont {
+  width: 100%;
+  height: 500px;
 }
 
 /********* Parte de Frase****************/
