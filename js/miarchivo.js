@@ -1,13 +1,20 @@
-let usuario;
+
 let usuarioEnLS=localStorage.getItem ('usuario');
+let contraseñaEnLs= localStorage.getItem('clave');
 let sessionIniciada;
+
+
+let usuario = document.getElementById('inputUsuario').value;
+let contra = document.getElementById('contraseña').value;
+
+
 //si habia un usuario almacenado lo recupero, sino, continuo con el registro
 let mainB = document.getElementById("body");
 let Registro = document.getElementById("grancont")
 let tf= true;
 
 function verificarUsuario() {
-        if (usuarioEnLS && sessionIniciada){
+        if (usuarioEnLS.value == usuario && contraseñaEnLs.value == contra && sessionIniciada){
             usuario = usuarioEnLS;
             Registro.className += " d-none";
             mainB.className += ' d-block';
@@ -16,35 +23,20 @@ function verificarUsuario() {
 
         }
         else {
-            
+            console.log("datos mal ingresados o usuario inexistente")
         }
-return tf;    
+  
 }
 
 
-//si retorna true es porque no habia usuario, sino retorna false
-let verdaderoFalso=verificarUsuario();
-
-//si es verdadero q no hay usuario, agrega uno, verifica que haya usuario
-    if(verdaderoFalso){
-        agregarusuario();
-        usuarioEnLS=localStorage.getItem ('usuario');
-        console.log("verifica usuario en local")
-        verificarUsuario();
-        console.log("verifica el usuario con session")
-    }
-
-
-
-
-function agregarusuario(){
+function login(){
 document.getElementById('formulario').addEventListener('submit', function(e){
     sessionIniciada = true;
    
 //e.preventDefault();   //cuando toco registrarme agrega el usuario 
 
 //intento con el for para recorrer formulario 
-let formulario=document.getElementById('formulario');
+/* let formulario=document.getElementById('formulario');
  let usuario_de_Array ={};
 
  for( let i=0; i<formulario.elements.length; i++){
@@ -60,11 +52,13 @@ let formulario=document.getElementById('formulario');
 
  localStorage.setItem("datos", JSON.stringify(usuario_de_Array));
 localStorage.setItem("usuario", JSON.stringify(usuario_de_Array.inputUsuario));
-localStorage.setItem("clave", JSON.stringify(usuario_de_Array.contraseña));
+localStorage.setItem("clave", JSON.stringify(usuario_de_Array.contraseña)); */
 
 });
 }
 
+login();
+verificarUsuario();
 
 
 let cerrarSesion= document.getElementById('logout')
