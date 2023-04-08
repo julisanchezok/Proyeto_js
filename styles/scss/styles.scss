@@ -224,6 +224,26 @@ a {
     @extend .centered;
 
 }
+.dispUser{
+    @extend .centered;
+    flex-direction: column;
+}
+
+.btn-primary{
+    color: $main_color;
+}
+.btn-primary:hover{
+    background-color: rgb(255, 208, 0);
+    border-color: $main_color;
+}
+label{
+    margin: 5px;
+}
+#logout{
+    background-color: $accent;
+    color: $main_color;
+    border: 1px solid $main_color;
+}
 
 /********* Parte de Frase****************/
 

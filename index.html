@@ -20,48 +20,11 @@
 
 <body>
     <div id="grancont"> 
-        <h1 class="title"> Necesitas un usuario para poder ingresar</h1>
-        
+        <h1 class="title"> Inicio de sesión </h1>
         <div class="container">
-            <form id="formulario">
-                <div class="row">
-                    <div class="form-group col-md-6">
-                      <label for="inputName">Nombre</label>
-                      <input type="text" class="form-control" id="inputName" placeholder="Nombre">
-                    </div>
-                    <div class="form-group col-md-6">
-                      <label for="inputSurname">Apellido</label>
-                      <input type="text" class="form-control" id="inputSurname" placeholder="Apellido">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="inputAddress">Dirección</label>
-                    <input type="text" class="form-control" id="inputAddress" placeholder="Calle 123">
-                </div>
-                
-                
-                <div class="row">
-                  <div class="form-group col-md-6">
-                    <label for="inputCity">Ciudad</label>
-                    <input type="text" class="form-control" id="inputCity">
-                  </div>
-                  <div class="form-group col-md-4">
-                    <label for="inputState">Sexo</label>
-                    <select id="inputSex" class="form-control">
-                      <option selected>Femenino</option>
-                      <option>Masculino</option>
-                    </select>
-                  </div>
-                  <div class="form-group col-md-2">
-                    <label for="inputEdad">Edad</label>
-                    <input type="number" class="form-control" id="inputEdad">
-                  </div>
-                </div>
-                <div>
-                    <h2> Crea un usuario y Contraseña para el sitio</h2>
-                </div>
-                <div class="row">
-                    <div class="col-auto">
+            <form class="formUs" id="formulario">
+                <div class="col-12 text-center dispUser">
+                    <div class="col-md-4">
                         <label class="sr-only" for="inlineFormInputGroup">Username</label>
                         <div class="input-group mb-2">
                           <div class="input-group-prepend">
@@ -69,16 +32,18 @@
                           </div>
                           <input type="text" class="form-control usuario" id="inputUsuario" placeholder="Username">
                         </div>
-                      </div>
-                    <div class="form-group col-md-6">
+                    </div>
+                    <div class="form-group col-md-4">
                       <label for="inputPassword4">Contraseña</label>
                       <input type="password" class="form-control" id="contraseña" placeholder="Password">
-                    </div>
-                </div>
-                <button type="submit" class="btn btn-primary registrar">Registrarme </button>
-              </form>
-            </div>
-    </div>
+                    </div>    
+                    <button type="submit" class="asociate btn btn-primary registrar mt-4">Log in </button>
+                    <p class="mt-2"><a href="./pages/asociate.html"> ¿No tienes cuenta? Registrate </a></p>
+                </div>        
+            </form>
+        </div>        
+    </div>    
+    
 
     <div id="body" class="displayini">
     <header>
@@ -92,7 +57,10 @@
             <a class="navbar-brand" href="#">
                 <img src="./images/logonav.jpeg" width="150px" height="80px" alt="logo la estacion del fitness">
             </a>
-            <div>
+            <div class="d-flex justify-content-center text-center">
+                <div id="welcome">
+                    
+                </div>
                 <form>
                 <button type="submit" class="btn btn-primary" id="logout"> Cerrar sesión </button>
                 </form>    
@@ -115,8 +83,8 @@
     <main>
         <section class="primerinicio">
             <div id="titulo" class="centered fade-in is-inViewport col-12 col-lg-4" data-transition="fade-in-up">
-                <h1 id="welcome"> La Estación del Fitness </h1>
-                <p id="p"> Gimnasio, social y bienestar.</p>
+                <h1> La Estación del Fitness </h1>
+                <p> Gimnasio, social y bienestar.</p>
                 <button class="asociate"><a href="/pages/asociate.html">Asociate</a> </button>
             </div>
             <div class="imageninic text-center col-lg-6 col-12 mt-4">
