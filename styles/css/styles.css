@@ -222,6 +222,36 @@ label {
   border: 1px solid #000;
 }
 
+.popUp {
+  position: absolute;
+  width: 400px;
+  height: 300px;
+  z-index: 1000;
+  border: 5px solid yellow;
+  left: 400px;
+  top: 150px;
+  color: white;
+  background-color: rgb(0, 0, 0);
+  box-shadow: 1px 1px 10px 10px yellow;
+}
+
+#welcome {
+  margin-top: 27px;
+}
+
+#botonCerrarPop {
+  background-color: #000;
+  color: white;
+  position: relative;
+  align-self: flex-end;
+  top: 5px;
+  right: 15px;
+}
+
+#botonCerrarPop:hover {
+  color: grey;
+}
+
 /********* Parte de Frase****************/
 .frase {
   width: 100%;

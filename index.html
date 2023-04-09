@@ -22,7 +22,7 @@
     <div id="grancont"> 
         <h1 class="title"> Inicio de sesión </h1>
         <div class="container">
-            <form class="formUs" id="formulario">
+            <form class="formUs" id="formularioLogin">
                 <div class="col-12 text-center dispUser">
                     <div class="col-md-4">
                         <label class="sr-only" for="inlineFormInputGroup">Username</label>
@@ -37,12 +37,19 @@
                       <label for="inputPassword4">Contraseña</label>
                       <input type="password" class="form-control" id="contraseña" placeholder="Password">
                     </div>    
-                    <button type="submit" class="asociate btn btn-primary registrar mt-4">Log in </button>
+                    <button type="submit" id="botonLogin" class="asociate btn btn-primary registrar mt-4">Log in </button>
                     <p class="mt-2"><a href="./pages/asociate.html"> ¿No tienes cuenta? Registrate </a></p>
                 </div>        
             </form>
         </div>        
     </div>    
+
+    <div class="popUp displayini" id="popUp">
+        <button id="botonCerrarPop"> X </button>
+        <p id="welcome"></p>
+        <p> Recordatorio de tus proximas clases: </p>
+        <p id="clasesInscripto"> </p>
+    </div>
     
 
     <div id="body" class="displayini">
@@ -85,7 +92,7 @@
             <div id="titulo" class="centered fade-in is-inViewport col-12 col-lg-4" data-transition="fade-in-up">
                 <h1> La Estación del Fitness </h1>
                 <p> Gimnasio, social y bienestar.</p>
-                <button class="asociate"><a href="/pages/asociate.html">Asociate</a> </button>
+                <button class="asociate"><a href="/pages/inscripcion.html">Asociate</a> </button>
             </div>
             <div class="imageninic text-center col-lg-6 col-12 mt-4">
                 <img class="fade-in is-inViewport" data-transition="fade-in-up" src="./images/ftini.jpeg" alt="foto del Gimnasio por fuera">

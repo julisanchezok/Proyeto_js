@@ -244,6 +244,33 @@ label{
     color: $main_color;
     border: 1px solid $main_color;
 }
+.popUp{
+    position: absolute;
+    width: 400px;
+    height: 300px;
+    z-index: 1000;
+    border: 5px solid $accent;
+    left: 400px;
+    top: 150px;
+    color: white;
+    background-color: rgba(0,0,0.2);
+    box-shadow: 1px 1px 10px 10px yellow;
+}
+#welcome{
+    margin-top: 27px;
+  
+}
+#botonCerrarPop{
+    background-color: $main_color;
+    color: white;
+    position: relative;
+    align-self: flex-end;
+    top: 5px;
+    right: 15px;
+}
+#botonCerrarPop:hover{
+    color: grey;
+}
 
 /********* Parte de Frase****************/
 

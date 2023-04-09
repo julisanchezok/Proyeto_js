@@ -1,10 +1,20 @@
 
 console.log("estoy en archivo 2")
 
+//el array usuarios va a ser del elemento usuarios de  LS y si no existe es vacio
+const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+
+function redireccionar() {
+    console.log("entre en la funcion redirec")
+    window.location.href = "../index.html";
+}
+
+
 function agregarusuario(){
 
-document.getElementById('esteformulario').addEventListener('click', function(e){
-//e.preventDefault();   //cuando toco registrarme agrega el usuario 
+document.getElementById('esteformulario').addEventListener('submit', function(e){
+
+e.preventDefault();   
 
 //intento con el for para recorrer formulario 
 let formulario=document.getElementById('esteformulario');
@@ -20,19 +30,30 @@ if (usuario_deArray.inputUsuario === '') {
     return; // devuelve la función para detener la ejecución
 }
 
-localStorage.setItem("datos", JSON.stringify(usuario_deArray));
-localStorage.setItem("usuario", JSON.stringify(usuario_deArray.inputUsuario));
-localStorage.setItem("clave", JSON.stringify(usuario_deArray.contraseña));
-
-
-});
+//si el usuario ya existe
+const user = usuarios.find( u => u.inputUsuario === usuario_deArray.inputUsuario)
+if (user){
+    console.log("El nombre usuario ya existe")
+    
 }
 
+
+//cada vez q nos registramos guardamos ese usuario en LS
+usuarios.push(usuario_deArray)
+localStorage.setItem("usuarios", JSON.stringify(usuarios))
+
+console.log("redireccionando al usuario")
+redireccionar()
+
+
+
+ });
+}
+
+
+
+
+
+
 agregarusuario();
-usuarioEnLS=localStorage.getItem ('usuario');
-
-
-let datos = localStorage.getItem("datos")
-JSON.parse(datos)
-console.log(datos)
 
