@@ -1,12 +1,25 @@
 
+/* ORGANIZATION:
+
+-Setting vars for login
+-Verifying user existence
+-Welcome message with name and gender 
+-Pop up script 
+-Log out Script 
+
+
+*/
+
+
+//Setting vars for login
 let usuarioEnLS=JSON.parse(localStorage.getItem ('usuarios'));
 let registro = document.getElementById('grancont')
 let mainBody= document.getElementById('body')
-let popUp= document.getElementById('popUp')
-let botonCerrarPP= document.getElementById('botonCerrarPop')
+
 
 const formularioLogin= document.getElementById('formularioLogin')
 
+//Verifying user existence
 
 const login = (e) => {
     e.preventDefault();
@@ -35,19 +48,7 @@ const login = (e) => {
 
 formularioLogin.addEventListener('submit', login)
 
-
-
-function cerrarPopUp(){
-    popUp.className += ' d-none';
-}
-
-botonCerrarPP.onclick = () => {cerrarPopUp()}
-
-
-
-
-let cerrarSesion= document.getElementById('logout')
-cerrarSesion.onclick =() => {}
+// Welcome message with name and gender 
 
 function mensajeBienvenida(datos){
     let title = document.getElementById('welcome')
@@ -68,6 +69,21 @@ function mensajeBienvenida(datos){
 }
 
 
-let datos = localStorage.getItem("datos")
-JSON.parse(datos)
-console.log(datos)
+//Pop up script 
+
+let popUp= document.getElementById('popUp')
+let botonCerrarPP= document.getElementById('botonCerrarPop')
+
+function cerrarPopUp(){
+    popUp.className += ' d-none';
+}
+
+botonCerrarPP.onclick = () => {cerrarPopUp()}
+
+setTimeout(() => {
+    cerrarPopUp()
+}, 15000)
+
+// Log out Script 
+let cerrarSesion= document.getElementById('logout')
+cerrarSesion.onclick =() => {}
