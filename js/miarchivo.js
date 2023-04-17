@@ -148,47 +148,7 @@ const promesa = new Promise((resolve, reject) => {
   });
   
 // function for on click event 
-//   const inscripcion = (e) => {
-   
-//     const containerPInsc = document.getElementById("PopUpInscripcion")
-//     containerPInsc.className += ' d-block'
-//     fetch('../data/actividades.json')
-//     .then(data => data.json())
-//     .then(actividades => {
-//         actividades.forEach(actividad => {
 
-//         containerPInsc.innerHTML += `
-        
-//         <button id="botonCerrarPop"> X </button>
-//         <p id="welcome"></p>
-//         <p> Horarios de ${actividad.nombre}: </p>
-//         <p id="clasesInscripto"> ${actividad.horario}</p>
-    
-//     `;
-//     })
-//     })
-//     }
-//js
-    // const inscripcion = (e) => {
-    //     const actividad = e.target.getAttribute('data-actividad');
-    //     const containerPInsc = document.getElementById("PopUpInscripcion");
-    //     containerPInsc.className += ' d-block'
-    //     containerPInsc.innerHTML += `
-    //         <button id="botonCerrarPop"> X </button>
-    //         <p id="welcome"></p>
-    //         <p> Horarios de ${actividad.nombre}: </p>
-    //     `;
-    //     fetch('../data/actividades.json')
-    //     .then(data => data.json())
-    //     .then(actividades => {
-    //         const horarios = actividades.find(a => a.nombre === actividad).horario;
-    //         horarios.forEach(horario => {
-    //             const p = document.createElement('p');
-    //             p.innerHTML = horario;
-    //             containerPInsc.appendChild(p);
-    //         });
-    //     });
-    // }
 
     const inscripcion = (e) => {
         const actividad = e.target.closest('.item').dataset.actividad;
@@ -198,6 +158,7 @@ const promesa = new Promise((resolve, reject) => {
             <button id="botonCerrarPopUpInscripcion"> X </button>
             <p id="welcome"></p>
             <p> Horarios de ${actividad}: </p>
+            
         `;
         fetch('../data/actividades.json')
             .then(data => data.json())
@@ -206,10 +167,33 @@ const promesa = new Promise((resolve, reject) => {
                 if (actividadEncontrada) {
                     const horarios = actividadEncontrada.horario;
                     if (horarios) {
-                        const clasesInscripto = document.createElement("p");
+                        const clasesInscripto = document.createElement("input");
+                        clasesInscripto.type = 'checkbox';
                         clasesInscripto.id = "clasesInscripto";
-                        clasesInscripto.innerText = horarios;
+
+                        
+                        
+                        var label = document.createElement('label');
+               
+
+
+                      //  clasesInscripto.innerText = horarios;
+
+                        clasesInscripto.value = horarios;
+                        
+
+
+                        label.htmlFor = 'clasesInscripto';
+                        label.appendChild(document.createTextNode(horarios));
+                        
                         containerPInsc.appendChild(clasesInscripto);
+                        containerPInsc.appendChild(label);
+                        
+                       const button_Inscripcion= document.createElement("button");
+                       button_Inscripcion.className += 'btn btn-primary'
+                       button_Inscripcion.innerText = "Inscribirse";
+                       containerPInsc.appendChild(button_Inscripcion);
+
                     } else {
                         containerPInsc.innerHTML += "<p>No hay horarios disponibles para esta actividad</p>";
                     }

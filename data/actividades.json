@@ -2,7 +2,7 @@
     {
         "imgUrl": "../images/spinning.jpg",
         "nombre": "Spinning",
-        "horario": "Martes a las 20 hrs",
+        "horario": ["Martes a las 20 hrs", "Jueves 20 hrs"],
         "descripcion": "El spinning consiste en la realización de ejercicios sobre la bicicleta, junto con música y efectuando coreografías, buscando la diversión del público asistente, al mismo tiempo que trabaja a nivel global la tonificación del tronco y las extremidades superiores junto con un importante trabajo cardiovascular."
     },
     {

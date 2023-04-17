@@ -224,8 +224,8 @@ label {
 }
 
 .popUp {
-  position: absolute;
-  height: 300px;
+  position: fixed;
+  height: 60%;
   z-index: 1000;
   border: 5px solid yellow;
   left: 400px;
