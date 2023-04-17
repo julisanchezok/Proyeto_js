@@ -1,0 +1,66 @@
+[
+    {
+        "imgUrl": "../images/spinning.jpg",
+        "nombre": "Spinning",
+        "horario": "Martes a las 20 hrs",
+        "descripcion": "El spinning consiste en la realización de ejercicios sobre la bicicleta, junto con música y efectuando coreografías, buscando la diversión del público asistente, al mismo tiempo que trabaja a nivel global la tonificación del tronco y las extremidades superiores junto con un importante trabajo cardiovascular."
+    },
+    {
+        "imgUrl": "../images/pilates.jpeg",
+        "nombre": "Pilates",
+        "horario": "Martes a las 20 hrs",
+        "descripcion": "El método Pilates forma parte del grupo de ejercicios anaeróbicos, es decir, aquellas actividades físicas que se realizan de forma breve y que se basan, fundamentalmente, en la fuerza. Su objetivo principal es reforzar la musculatura y aumentar el control, fuerza y flexibilidad de nuestro cuerpo."
+        
+    }, 
+    {
+        "imgUrl": "../images/boxeo.jpg",
+        "nombre": "Boxeo",
+        "horario": "Martes a las 20 hrs",
+
+        "descripcion": "El entrenamiento de boxeo es muy exigente a nivel cardiovascular: generalmente se trabaja en intervalos de tres minutos de duración en los cuales el organismo trabaja a una intensidad alta. Entre estos intervalos se realizan descansos cortos."
+    }, 
+    {
+        "imgUrl":"../images/jumping.jpeg",
+        "nombre": "Jumping",
+        "horario": "Martes a las 20 hrs",
+
+        "descripcion":"Consiste en sesiones de 60 minutos realizando diferentes ejercicios sobre una cama elástica (a menudo equipada con una barra para ganar estabilidad en los movimientos más complicados). Se trata de saltar sin parar durante una hora, combinando pasos aeróbicos, variando el ritmo y la velocidad de manera que el cuerpo entero se mantiene activo y se fortalece mientras nos divertimos."
+    
+    },
+    {
+        "imgUrl": "../images/crosfit.jpeg",
+        "nombre": "Crossfit",
+        "horario": "Martes a las 20 hrs",
+        "descripcion": "CrossFit es una técnica de entrenamiento que conecta movimientos de diferentes disciplinas, tales como la halterofilia, el entrenamiento metabólico o el gimnástico. Consiste en acometer un programa de ejercicios (flexiones, tracción, etc), en un tiempo determinado y con un número definido deveces."
+    
+    },
+    {
+        "imgUrl": "../images/body_pumo.jpg",
+        "nombre": " Body Pump ",
+        "horario": "Martes a las 20 hrs",
+        "descripcion": "Es un programa de entrenamiento físico intenso que combina actividad aeróbica y trabajo muscular mediante el levantamiento de pesas al ritmo de la música. Son sesiones dirigidas, divertidas y motivadoras, en las que se fortalece el sistema cardiovascular y la gran mayoría de los músculos del cuerpo"
+    
+    },
+    {
+        "imgUrl":"../images/HIIT.jpg",
+        "nombre": "HIIT",
+        "horario": "Martes a las 20 hrs",
+        "descripcion": "El entrenamiento HIIT, que se enfoca en ráfagas cortas de ejercicio intenso, es perfecto si tienes poco tiempo, y puede ayudarte a mejorar tu condición física de varias maneras. El entrenamiento de intervalos de alta intensidad (HIIT) se enfoca en realizar ráfagas cortas e intensas de ejercicio"
+    
+    },
+    {
+        "imgUrl": "../images/funcional.jpg",
+        "nombre": "Funcional",
+        "horario": "Martes a las 20 hrs",
+        "descripcion": "Los ejercicios de entrenamiento funcional son aquellos que se basan en un trabajo de fuerza-resistencia y que implican la participación de todos los grupos musculares. Se basa en  realizar ejercicios que se adaptan a los movimientos naturales del cuerpo humano para trabajar de forma global músculos y articulaciones."
+    
+    },
+    {
+        "imgUrl":"../images/yoga.jpg" ,
+        "horario": "Martes a las 20 hrs",
+        "nombre": "Yoga",
+        "descripcion": "El yoga es una práctica que conecta el cuerpo, la respiración y la mente. Esta práctica utiliza posturas físicas, ejercicios de respiración y meditación para mejorar la salud general. Es conjunto de disciplinas y prácticas de tipo físico, mental y espiritual, cuyo objetivo es lograr el equilibrio entre el cuerpo y mente para alcanzar la iluminación y la trascendencia"
+    
+    }
+
+]
