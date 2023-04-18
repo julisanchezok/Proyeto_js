@@ -3,9 +3,18 @@
 
 -Setting vars for login
 -Verifying user existence
+-verifying if formulario exists and if the user is logged 
+-function when the user is loged 
 -Welcome message with name and gender 
 -Pop up script 
--Log out Script 
+-Log out Script
+-AJAX FETCH ACTIVITIES 
+-function for on click event 
+-reading values and adding the class marked 
+-function for close Pop up ((activities))
+-function for each button in Actividades    
+
+
 
 
 */
@@ -15,75 +24,106 @@
 let usuarioEnLS=JSON.parse(localStorage.getItem ('usuarios'));
 let registro = document.getElementById('grancont')
 let mainBody= document.getElementById('body')
-
-
+let popUp= document.getElementById('popUp')
+let logeoprevio = false;
 const formularioLogin= document.getElementById('formularioLogin')
-let isLoggedIn = false;
+
+let isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+
+let claseAsociada = localStorage.getItem ('claseSeleccionada');
 
 //Verifying user existence
 const login = (e) => {
-    e.preventDefault();
-
+   // e.preventDefault();
+    logeoprevio = true;
     const usuario = document.getElementById('inputUsuario').value
     const password = document.getElementById('contraseña').value
     const userEncontrado = usuarioEnLS.find(u=>u.inputUsuario === usuario)
-
     if (userEncontrado){
         if(userEncontrado.contraseña === password){
             localStorage.setItem('isLoggedIn', true);
-            if (localStorage.getItem('isLoggedIn')) {
-                mainBody.className += ' d-block';
-                registro.className += ' d-none';
-                mainBody.className+= ' d-block';
-                popUp.className += '  d-flex justify-content-start flex-column align-items-center'
-                mensajeBienvenida(userEncontrado);
-                isLoggedIn = true;
-                console.log("logueado correctamente", userEncontrado)
+            if (!isLoggedIn) {
+                let JsonUsuario = JSON.stringify(userEncontrado)
+                sessionStorage.setItem("usuarioIniciado", JsonUsuario);
+                estaLog();
+                
+            }
             } 
-        }
         else{
             console.log("usuario o contraseña incorrecta")
            } 
     }
-   else{
+   else {
     console.log("usuario o contraseña incorrecta")
    } 
 
 }
 
+//verifying if formulario exists and if the user is logged 
 if(formularioLogin){
+       if (isLoggedIn){
+        let userEncontrado = JSON.parse(sessionStorage.getItem("usuarioIniciado"))
+        estaLog()
+        }  
+        else{
+        formularioLogin.addEventListener('submit', login)
+    }
     formularioLogin.addEventListener('submit', login)
+
 }
+
+//function when the user is loged 
+
+    function estaLog() {
+        const userEncontrado = JSON.parse(sessionStorage.getItem("usuarioIniciado"));
+      
+        if (userEncontrado) {
+          mainBody.className = mainBody.className.replace('d-none', 'd-block');
+          registro.className = registro.className.replace('d-block', 'd-none');
+      
+          if (claseAsociada) {
+            popUp.className = popUp.className.replace('d-none', 'd-block');
+            popUp.className += '  d-flex justify-content-start flex-column align-items-center';
+      
+            mensajeBienvenida(userEncontrado.inputName, userEncontrado.inputSex);
+        
+            console.log("logueado correctamente", userEncontrado);
+          }
+        }
+      }
+      
+
 
 
 
 // Welcome message with name and gender 
 
-function mensajeBienvenida(datos){
+function mensajeBienvenida(name, gender){
     let title = document.getElementById('welcome')
-    const name = datos.inputName
-    const gender = datos.inputSex
-    if(gender == "Femenino"){
-            title.innerText = "Bienvenida " + name +"!"
+    let names= name;
+    let genders = gender;
+    if(genders == "Femenino"){
+            title.innerText = "Bienvenida " + names +"!"
     }
     else{
-            title.innerText = "Bienvenido " +  name +"!"
+            title.innerText = "Bienvenido " +  names +"!"
     }   
      
     let claseInscripto = document.getElementById('clasesInscripto')
-    claseInscripto.innerHTML = datos.clase 
+    let claseAso = localStorage.getItem ('claseSeleccionada');
+    claseInscripto.innerHTML = claseAso
         
 }
 
 
 //Pop up script 
 
-let popUp= document.getElementById('popUp')
+
 let botonCerrarPP= document.getElementById('botonCerrarPop')
 
 if(popUp){
     function cerrarPopUp(){
-        popUp.className += ' d-none';
+        popUp.className = popUp.className.replace('d-block', 'd-none')
     }
 }
 
@@ -98,6 +138,7 @@ setTimeout(() => {
 }, 20000)
 }
 
+//log out script
 let cerrarSesion = document.getElementById('logout');
 if(cerrarSesion){
     cerrarSesion.onclick = () => {
@@ -147,9 +188,9 @@ const promesa = new Promise((resolve, reject) => {
     console.error(error); // prints: "Hubo un error al resolver la promesa"
   });
   
+
+
 // function for on click event 
-
-
     const inscripcion = (e) => {
         const actividad = e.target.closest('.item').dataset.actividad;
         const containerPInsc = document.getElementById("PopUpInscripcion");
@@ -166,33 +207,39 @@ const promesa = new Promise((resolve, reject) => {
                 const actividadEncontrada = actividades.find(a => a.nombre === actividad);
                 if (actividadEncontrada) {
                     const horarios = actividadEncontrada.horario;
-                    if (horarios) {
-                        const clasesInscripto = document.createElement("input");
-                        clasesInscripto.type = 'checkbox';
-                        clasesInscripto.id = "clasesInscripto";
+                    if (horarios) {                        
+                            const containerHorarios = document.createElement("div");
+                            containerHorarios.className += "horarios-container";
 
-                        
-                        
-                        var label = document.createElement('label');
-               
+                            horarios.forEach((horario, index) => {
+                            const horarioInput = document.createElement("input");
+                            horarioInput.type = "checkbox";
+                            horarioInput.id = `horario-${index}`;
+                            horarioInput.value = horario;
+                            horarioInput.className += "form-check-input";
 
+                            const horarioLabel = document.createElement("label");
+                            horarioLabel.innerText = horario;
+                            horarioLabel.htmlFor = `horario-${index}`;
+                            horarioLabel.className += "form-check-label";
 
-                      //  clasesInscripto.innerText = horarios;
+                            const horarioContainer = document.createElement("div");
+                            horarioContainer.className += "form-check";
 
-                        clasesInscripto.value = horarios;
-                        
+                            horarioContainer.appendChild(horarioInput);
+                            horarioContainer.appendChild(horarioLabel);
+                            containerHorarios.appendChild(horarioContainer);
+                            });
 
+                            containerPInsc.appendChild(containerHorarios);
 
-                        label.htmlFor = 'clasesInscripto';
-                        label.appendChild(document.createTextNode(horarios));
-                        
-                        containerPInsc.appendChild(clasesInscripto);
-                        containerPInsc.appendChild(label);
-                        
-                       const button_Inscripcion= document.createElement("button");
-                       button_Inscripcion.className += 'btn btn-primary'
-                       button_Inscripcion.innerText = "Inscribirse";
-                       containerPInsc.appendChild(button_Inscripcion);
+                        const button_Inscripcion= document.createElement("button");
+                        button_Inscripcion.className += 'btn btn-primary'
+                        button_Inscripcion.id = 'agregarClase'
+                        button_Inscripcion.innerText = "Inscribirse";
+                        containerPInsc.appendChild(button_Inscripcion);    
+                        document.getElementById("agregarClase").addEventListener("click", addClass )
+
 
                     } else {
                         containerPInsc.innerHTML += "<p>No hay horarios disponibles para esta actividad</p>";
@@ -204,7 +251,32 @@ const promesa = new Promise((resolve, reject) => {
         containerPInsc.className = containerPInsc.className.replace('d-none', 'd-block');
         document.getElementById("botonCerrarPopUpInscripcion").addEventListener("click", cerrarPopUpInscripcion);
     }
+
+    //reading values and adding the class marked 
+    const addClass = () => {
+        const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        let claseSeleccionada;
+
+        checkboxes.forEach(checkbox => {
+        if (checkbox.checked) {
+            claseSeleccionada = checkbox.value;
+        }
+        });
+
+        
+        localStorage.setItem('claseSeleccionada', claseSeleccionada);
+        const containerPInsc = document.getElementById("PopUpInscripcion");
+        containerPInsc.innerHTML += "<p> Inscripción realizada! <p>"
+        
+
+        setTimeout(() => {
+            cerrarPopUpInscripcion();
+          }, 2000);
+
+
+    }
     
+    //function for close Pop up ((activities))
     const cerrarPopUpInscripcion = () => {
         const containerPInsc = document.getElementById("PopUpInscripcion");
         containerPInsc.className = containerPInsc.className.replace('d-block', 'd-none');
@@ -220,4 +292,3 @@ function inscribirseboton() {
         boton.addEventListener("click", inscripcion);
     });
 }
-
